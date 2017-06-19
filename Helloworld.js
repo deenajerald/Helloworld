@@ -48,9 +48,9 @@ var options = {
 
     app.post('/',function(req,res){
    var apiagentreq=req.body.result&&req.body.result.parameters;
-   var resagent=' Conform order for the phone';
+   var resagent=' Conform order for the p';
    var resagent1='please enter phone model1';
- console.log('request are'+apiagentreq);
+ console.log('request are'+ JSON.stringify(apiagentreq));
  if (apiagentreq==="hi")
  {
    return res.json({
