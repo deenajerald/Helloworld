@@ -48,10 +48,10 @@ var options = {
 
     app.post('/',function(req,res){
    var apiagentreq=req.body.result&&req.body.result.parameters;
-   var resagent='hello welcome to PHONE BOOK chat bot';
-   var resagent1='please enter phone model';
+   var resagent=' PHONE BOOK chat bot';
+   var resagent1='please enter phone model1';
  console.log('request are'+apiagentreq);
- if (apiagentreq=='hi')
+ if (apiagentreq=="hi")
  {
    return res.json({
      speech:resagent,
