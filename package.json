@@ -15,5 +15,7 @@
   "bugs": {
     "url": "https://github.com/deenajerald/Helloworld/issues"
   },
-  "homepage": "https://github.com/deenajerald/Helloworld#readme"
+  "homepage": "https://github.com/deenajerald/Helloworld#readme",
+  "dependencies": {},
+  "devDependencies": {}
 }
