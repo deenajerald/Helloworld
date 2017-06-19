@@ -8,10 +8,11 @@ var app = express();
   response.send('Hello World!')
 })
 */
+/*
 'use strict';
 var apiai = require('apiai');
 
-var appai = apiai("421ac8ae-4418-4e7c-a822-beb84ec65d20");
+var appai = apiai("807237fd5b044892a70b24fd31801bba");
 
 var express=require('express');
 var bodyParser = require('body-parser');
@@ -21,9 +22,27 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
 var options = {
-    sessionId: '567yh8'
+    sessionId: '33333'
 };
 
  app.listen(app.get('port'), function() {
    console.log("Node app is running at localhost:" + app.get('port'))
- })
+ })*/
+
+ var apiai = require('apiai');
+
+var app = apiai("807237fd5b044892a70b24fd31801bba");
+
+var request = app.textRequest('<Your text query>', {
+    sessionId: '52369'
+});
+
+request.on('response', function(response) {
+    console.log(response);
+});
+
+request.on('error', function(error) {
+    console.log(error);
+});
+
+request.end();
