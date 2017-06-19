@@ -9,7 +9,7 @@ var app = express();
 })
 */
 'use strict';
-var apiai = require('./api/ApiInnovation/Helloworld');
+var apiai = require('apiai');
 
 var appai = apiai("421ac8ae-4418-4e7c-a822-beb84ec65d20");
 
