@@ -60,7 +60,7 @@ var options = {
      displayText: resagent,
      source:'booking'  });
   }
-else if (req.body.result.metadata.intentName=="parentIntentPhone - yes") {
+ if (req.body.result.metadata.intentName=="parentIntentPhone - yes") {
   var apiagentreq=req.body.result&&req.body.result.parameters;
   var resagent=' thanks our agents will contact you for Order conformation';
 
