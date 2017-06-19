@@ -60,8 +60,17 @@ var options = {
      displayText: resagent,
      source:'booking'  });
   }
+else if (req.body.result.metadata.intentName=="parentIntentPhone - yes") {
+  var apiagentreq=req.body.result&&req.body.result.parameters;
+  var resagent=' thanks our agents will contact you for Order conformation';
 
+  console.log('request are'+ JSON.stringify(apiagentreq));
 
+  return res.json({
+    speech:resagent,
+    displayText: resagent,
+    source:'booking'  });
+}
 
 
  });
