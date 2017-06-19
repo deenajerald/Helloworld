@@ -51,20 +51,10 @@ var options = {
    var resagent=' PHONE BOOK chat bot';
    var resagent1='please enter phone model1';
  console.log('request are'+apiagentreq);
- if (apiagentreq=="hi")
- {
    return res.json({
      speech:resagent,
      displayText: resagent,
      source:'hello ticket book'  });
-  }
-     else {
-       return res.json({
-         speech:resagent,
-         displayText: resagent1,
-         source:'hello ticket book'  });
-     }
-
 
 
 
