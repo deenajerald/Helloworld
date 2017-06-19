@@ -47,24 +47,19 @@ var options = {
 
 
     app.post('/',function(req,res){
+
+  if (req.body.result.metadata.intentName=="parentIntentPhone")
+  {
    var apiagentreq=req.body.result&&req.body.result.parameters;
-   var resagent=' Conform order for the p';
+   var resagent=' Conform order for the phone';
    var resagent1='please enter phone model1';
- console.log('request are'+ JSON.stringify(apiagentreq));
- if (apiagentreq==="hi")
- {
+   console.log('request are'+ JSON.stringify(apiagentreq));
+
    return res.json({
      speech:resagent,
      displayText: resagent,
-     source:'hello ticket book'  });
+     source:'booking'  });
   }
-     else {
-       return res.json({
-         speech:resagent,
-         displayText: resagent1,
-         source:'hello ticket book'  });
-     }
-
 
 
 
