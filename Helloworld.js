@@ -47,7 +47,7 @@ var options = {
 
 
     app.post('/',function(req,res){
-console.log(req.body.result.metadata.intentName);
+console.log("name "+req.body.result.metadata.intentName);
   if (req.body.result.metadata.intentName=='parentIntentPhone')
   {
    var apiagentreq=req.body.result&&req.body.result.parameters;
@@ -60,7 +60,7 @@ console.log(req.body.result.metadata.intentName);
      displayText: resagent,
      source:'booking'  });
   }
-  console.log(req.body.result.metadata.intentName);
+  console.log("name 2 "+req.body.result.metadata.intentName);
  if (req.body.result.metadata.intentName=='parentIntentPhone - yes') {
   var apiagentreq=req.body.result&&req.body.result.parameters;
   var resagent=' thanks our agents will contact you for Order conformation';
