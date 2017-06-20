@@ -48,6 +48,7 @@ var options = {
 
     app.post('/',function(req,res){
 console.log("name "+req.body.result.metadata.intentName);
+console.log('request of parent:'+ JSON.stringify(req.body));
   if (req.body.result.metadata.intentName=='parentIntentPhone')
   {
    var apiagentreq=req.body.result&&req.body.result.parameters;
@@ -61,6 +62,7 @@ console.log("name "+req.body.result.metadata.intentName);
      source:'booking'  });
   }
   console.log("name 2 "+req.body.result.metadata.intentName);
+  console.log('request of yes :'+ JSON.stringify(req.body));
  if (req.body.result.metadata.intentName=='parentIntentPhone - yes') {
   var apiagentreq=req.body.result&&req.body.result.parameters;
   var resagent=' thanks our agents will contact you for Order conformation';
