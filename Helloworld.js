@@ -74,7 +74,17 @@ console.log('request of parent:'+ JSON.stringify(req.body));
     displayText: resagent,
     source:'booking'  });
 }
+if (req.body.result.metadata.intentName=='parentIntentPhone - more') {
+ var apiagentreq=req.body.result&&req.body.result.parameters;
+ var resagent=' your phone features can be viewed in the following site http://www.fonearena.com/';
 
+ console.log('request are'+ JSON.stringify(apiagentreq));
+
+ return res.json({
+   speech:resagent,
+   displayText: resagent,
+   source:'booking'  });
+}
 
  });
 
