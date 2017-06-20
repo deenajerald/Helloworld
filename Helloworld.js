@@ -47,7 +47,7 @@ var options = {
 
 
     app.post('/',function(req,res){
-
+console.log(req.body.result.metadata.intentName);
   if (req.body.result.metadata.intentName=='parentIntentPhone')
   {
    var apiagentreq=req.body.result&&req.body.result.parameters;
@@ -60,6 +60,7 @@ var options = {
      displayText: resagent,
      source:'booking'  });
   }
+  console.log(req.body.result.metadata.intentName);
  if (req.body.result.metadata.intentName=='parentIntentPhone - yes') {
   var apiagentreq=req.body.result&&req.body.result.parameters;
   var resagent=' thanks our agents will contact you for Order conformation';
